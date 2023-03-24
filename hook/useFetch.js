@@ -27,11 +27,11 @@ function UseFetch(endpoint, query) {
       setIsLoading(false);
     } catch (error) {
       setError(error);
-      // alert("There is an error");
+      alert("There is an error");
     } finally {
       setIsLoading(false);
     }
-    return null
+    return null;
   };
 
   useEffect(() => {
