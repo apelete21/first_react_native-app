@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 
 // const rapidApiKey = RAPID_API_KEY;
 
-function UseFetch(endpoint, query) {
+export default function UseFetch(endpoint, query) {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -27,14 +27,14 @@ function UseFetch(endpoint, query) {
       setIsLoading(false);
     } catch (error) {
       setError(error);
-      alert("There is an error");
+      // alert("There is an error");
     } finally {
       setIsLoading(false);
     }
-    return null;
   };
 
   useEffect(() => {
+    setIsLoading(true);
     fecthData();
   }, []);
 
@@ -45,5 +45,3 @@ function UseFetch(endpoint, query) {
 
   return { data, isLoading, error, refetch };
 }
-
-export default UseFetch;

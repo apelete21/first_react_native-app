@@ -1,6 +1,7 @@
 import { Stack, useRouter, useSearchParams } from "expo-router";
 import {
   ActivityIndicator,
+  RefreshControl,
   SafeAreaView,
   ScrollView,
   Text,
